@@ -15,6 +15,6 @@ router.post('/login', user_controller.login_user);
 router.post('/ticket', jwt_verify,ticket_controller.create_ticket)
 
 //fetch ticcket
-router.post('/get_tickets',jwt_verify,ticket_controller.fetch_tickets)
+router.get('/get_tickets/:user_id',jwt_verify,ticket_controller.fetch_tickets)
 
 module.exports = router;

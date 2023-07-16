@@ -40,7 +40,7 @@ async function fetch_tickets(req, res){
   const user_id = req.params.user_id;
   const page = parseInt(req.query.page) || 1;
   const limit = parseInt(req.query.limit) || 6;
-
+  console.log(user_id);
   try {
     // Get total count of tickets
     const total_count = await ticket_schema.find({ user: user_id }).count();
